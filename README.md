@@ -1,99 +1,133 @@
-# 🛡️ MS08-067 Penetration Testing Lab
+# MS08-067 Penetration Testing Lab
 
-A hands-on ethical hacking lab demonstrating exploitation of the MS08-067 vulnerability using the Metasploit Framework in a controlled virtual environment.
-
----
-
-## 📌 Project Overview
-
-This project demonstrates the complete penetration testing workflow against a vulnerable Windows XP machine affected by the MS08-067 SMB vulnerability.
-
-The objective was to identify the vulnerable service, exploit it using Metasploit, establish a Meterpreter session, and perform post-exploitation activities within an isolated lab environment.
+A hands-on penetration testing lab demonstrating the exploitation of the **MS08-067 Microsoft Server Service vulnerability** using **Kali Linux**, **Nmap**, and **Metasploit Framework** against a vulnerable **Windows XP SP3** virtual machine.
 
 ---
 
-## ⚠️ Disclaimer
+## Overview
 
-This project was conducted in an authorized laboratory environment for educational purposes only.
+This project demonstrates the complete penetration testing workflow, including:
 
----
+- Target reconnaissance
+- Port scanning with Nmap
+- Exploit discovery using Metasploit
+- Successful exploitation of MS08-067
+- Post-exploitation verification
 
-## ✨ Features
-
-- Network Reconnaissance
-- SMB Service Enumeration
-- MS08-067 Exploitation
-- Meterpreter Session
-- Remote Command Execution
-- System Enumeration
-- Screenshot Capture
-- Process Enumeration
+> **Disclaimer:** This project was performed in a controlled laboratory environment for educational purposes only.
 
 ---
 
-## 🛠 Technologies Used
+## Lab Environment
+
+| Component | Version |
+|-----------|----------|
+| Attacker Machine | Kali Linux |
+| Target Machine | Windows XP SP3 |
+| Exploitation Framework | Metasploit |
+| Scanner | Nmap |
+| Virtualization | VirtualBox |
+
+---
+
+## Tools Used
 
 - Kali Linux
-- Metasploit Framework
 - Nmap
-- Meterpreter
-- Windows XP SP2
+- Metasploit Framework
+- Windows XP SP3
 - VirtualBox
 
 ---
 
-## 📂 Lab Workflow
+## Attack Workflow
 
-1. Scan the target using Nmap.
-2. Identify SMB service.
-3. Load the MS08-067 exploit.
-4. Configure payload.
-5. Execute the exploit.
-6. Obtain Meterpreter session.
-7. Perform post-exploitation.
-8. Document the results.
+1. Configure the lab environment.
+2. Discover the target host.
+3. Scan the SMB service (Port 445).
+4. Search for the MS08-067 exploit.
+5. Configure the exploit parameters.
+6. Launch the exploit.
+7. Gain Meterpreter access.
+8. Perform post-exploitation verification.
 
 ---
 
-## 📸 Screenshots
+# Screenshots
 
-### Target Scanning
+## 1. Target Scanning
 
-![Scanning](images/scanning.png)
+![Target Scanning](images/scanning.png)
 
-### Metasploit Configuration
+Scanning the target machine using **Nmap** to verify that the SMB service is accessible.
 
-![Metasploit](images/metasploit.png)
+---
 
-### Meterpreter Session
+## 2. Starting Metasploit
 
-![Meterpreter](images/meterpreter.png)
+![Metasploit Console](images/metasploit-console.png)
 
-### Post Exploitation
+Launching the Metasploit Framework.
+
+---
+
+## 3. Exploit Selection
+
+![Exploit Selection](images/exploit-selection.png)
+
+Searching for the **MS08-067 NetAPI** exploit module.
+
+---
+
+## 4. Successful Exploitation
+
+![Successful Exploitation](images/successful-exploitation.png)
+
+Configuring the exploit parameters and successfully opening a Meterpreter session.
+
+---
+
+## 5. Post Exploitation
 
 ![Post Exploitation](images/post-exploitation.png)
 
----
-
-## 📄 Presentation
-
-The project presentation is included in this repository.
-
-📄 **ISEC364_202103624_Presentation.pptx**
+Verifying successful access by collecting target system information using **sysinfo**.
 
 ---
 
-## 📈 Results
+## Skills Demonstrated
 
-- Successfully exploited the MS08-067 vulnerability.
-- Established a Meterpreter session.
-- Performed system enumeration.
-- Demonstrated post-exploitation techniques.
-- Highlighted the importance of patch management.
+- Vulnerability Assessment
+- Network Reconnaissance
+- Port Scanning
+- Exploit Identification
+- Metasploit Framework
+- Meterpreter
+- Post Exploitation
+- Ethical Hacking
+- Penetration Testing
+- Cybersecurity Lab Practice
 
 ---
 
-## 👩‍💻 Author
+## Repository Structure
+
+```
+MS08-067-Penetration-Testing-Lab
+│
+├── images/
+│   ├── scanning.png
+│   ├── metasploit-console.png
+│   ├── exploit-selection.png
+│   ├── successful-exploitation.png
+│   └── post-exploitation.png
+│
+└── README.md
+```
+
+---
+
+## Author
 
 **Shujun Alsaif**
 
